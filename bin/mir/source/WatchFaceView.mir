@@ -1,0 +1,126 @@
+[ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 1; ]
+import Toybox.Graphics;
+[ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 3; ]
+import Toybox.System;
+[ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 4; ]
+import Toybox.WatchUi;
+[ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 8; ]
+class WatchFaceView extends WatchUi.WatchFace{
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 8; ]
+    <init> {
+    }
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 9; @position = 8; ]
+    var backgroundImage;
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 12; ]
+    function initialize() as Void {
+C_programming_projects_garmin__open_inside__WatchFace_source_WatchFaceView_mc_12_26_18_4_start:
+[ "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc" 13 8 ]
+        %tmp.2 = getv ? :WatchFace;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc" 15 8 ]
+        %tmp.6 = getm $.Toybox.WatchUi;
+        %tmp.7 = getv function ? %tmp.6 :Bitmap;
+        %tmp.8 = newd 1;
+        %tmp.10 = const :rezId;
+        %tmp.12 = getv ? :Rez;
+        %tmp.13 = getv %tmp.12 :Drawables;
+        %tmp.14 = getv %tmp.13 :backgroundImage;
+        %tmp.15 = dup %tmp.8;
+        %tmp.16 = aputv %tmp.15 %tmp.10 %tmp.14;
+        %tmp.4 = newc %tmp.7 (%tmp.16);
+        putv self :backgroundImage %tmp.4;
+C_programming_projects_garmin__open_inside__WatchFace_source_WatchFaceView_mc_12_26_18_4_stop:
+    }
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 21; ]
+    function onLayout(dc as Dc) as Void {
+C_programming_projects_garmin__open_inside__WatchFace_source_WatchFaceView_mc_21_40_23_4_start:
+[ "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc" 22 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        %tmp.4 = getv ? :Rez;
+        %tmp.5 = getv %tmp.4 :Layouts;
+        %tmp.6 = getv function %tmp.5 :WatchFace;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.9);
+C_programming_projects_garmin__open_inside__WatchFace_source_WatchFaceView_mc_21_40_23_4_stop:
+    }
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 28; ]
+    function onShow() as Void {
+    }
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 32; ]
+    function onUpdate(dc as Dc) as Void {
+C_programming_projects_garmin__open_inside__WatchFace_source_WatchFaceView_mc_32_40_43_4_start:
+[ "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc" 34 8 ]
+        [ "C_programming_projects_garmin__open_inside__WatchFace_source_WatchFaceView_mc_32_40_43_4_start" "C_programming_projects_garmin__open_inside__WatchFace_source_WatchFaceView_mc_32_40_43_4_stop" ]
+        %clockTime.1 = local;
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %clockTime.1 %tmp.3;
+[ "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc" 35 8 ]
+        [ "C_programming_projects_garmin__open_inside__WatchFace_source_WatchFaceView_mc_32_40_43_4_start" "C_programming_projects_garmin__open_inside__WatchFace_source_WatchFaceView_mc_32_40_43_4_stop" ]
+        %timeString.2 = local;
+        %tmp.4 = getm $.Toybox.Lang;
+        %tmp.5 = getv function %tmp.4 :format;
+        %tmp.6 = "$1$:$2$";
+        %tmp.7 = newa 2;
+        %tmp.8 = lgetv %clockTime.1;
+        %tmp.9 = getv %tmp.8 :hour;
+        %tmp.10 = dup %tmp.7;
+        %tmp.11 = aputv %tmp.10 0 %tmp.9;
+        %tmp.12 = lgetv %clockTime.1;
+        %tmp.13 = getv %tmp.12 :min;
+        %tmp.14 = getv function %tmp.13 :format;
+        %tmp.15 = "%02d";
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        %tmp.17 = dup %tmp.11;
+        %tmp.18 = aputv %tmp.17 1 %tmp.16;
+        %tmp.19 = invoke %tmp.4 %tmp.5(%tmp.6, %tmp.18);
+        lputv %timeString.2 %tmp.19;
+[ "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc" 36 8 ]
+        [ "C_programming_projects_garmin__open_inside__WatchFace_source_WatchFaceView_mc_32_40_43_4_start" "C_programming_projects_garmin__open_inside__WatchFace_source_WatchFaceView_mc_32_40_43_4_stop" ]
+        %view.3 = local;
+        %tmp.21 = getv ? :View;
+        %tmp.22 = getv function %tmp.21 :findDrawableById;
+        %tmp.23 = "TimeLabel";
+        %tmp.24 = invoke %tmp.21 %tmp.22(%tmp.23);
+        %tmp.25 = as %tmp.24 Text;
+        lputv %view.3 %tmp.25;
+[ "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc" 37 8 ]
+        %tmp.26 = lgetv %view.3;
+        %tmp.27 = getv function %tmp.26 :setText;
+        %tmp.29 = lgetv %timeString.2;
+        invoke %tmp.26 %tmp.27(%tmp.29);
+[ "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc" 40 8 ]
+        %tmp.31 = getv ? :backgroundImage;
+        %tmp.32 = getv function %tmp.31 :draw;
+        %tmp.34 = lgetv %dc;
+        invoke %tmp.31 %tmp.32(%tmp.34);
+[ "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc" 42 8 ]
+        %tmp.36 = getv ? :View;
+        %tmp.37 = getv function %tmp.36 :onUpdate;
+        %tmp.39 = lgetv %dc;
+        invoke %tmp.36 %tmp.37(%tmp.39);
+C_programming_projects_garmin__open_inside__WatchFace_source_WatchFaceView_mc_32_40_43_4_stop:
+    }
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 48; ]
+    function onHide() as Void {
+    }
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 53; ]
+    function onExitSleep() as Void {
+    }
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 57; ]
+    function onEnterSleep() as Void {
+    }
+}
+[ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\WatchFaceView.mc"; @line = 1; ]
+<init> {
+}
