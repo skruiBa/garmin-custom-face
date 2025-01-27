@@ -1,0 +1,119 @@
+[ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var backgroundImage as ResourceId;
+        [ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 10; @position = 27; initialized = true; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 13; ]
+    module Layouts {
+        [ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 13; ]
+        <init> {
+        }
+        [ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 14; ]
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+c_programming_projects_garmin__open_inside__WatchFace_bin_gen_006_B3224_00_source_Rez_mcgen_14_73_20_8_start:
+[ "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen" 15 12 ]
+            [ "c_programming_projects_garmin__open_inside__WatchFace_bin_gen_006_B3224_00_source_Rez_mcgen_14_73_20_8_start" "c_programming_projects_garmin__open_inside__WatchFace_bin_gen_006_B3224_00_source_Rez_mcgen_14_73_20_8_stop" ]
+            %rez_cmp_local_bitmap_backgroundImage.1 = local;
+            %tmp.3 = getm $.Toybox.WatchUi;
+            %tmp.4 = getv function ? %tmp.3 :Bitmap;
+            %tmp.5 = newd 4;
+            %tmp.7 = const :identifier;
+            %tmp.8 = "backgroundImage";
+            %tmp.9 = dup %tmp.5;
+            %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
+            %tmp.12 = const :rezId;
+            %tmp.13 = getm $;
+            %tmp.14 = getv %tmp.13 :Rez;
+            %tmp.15 = getv %tmp.14 :Drawables;
+            %tmp.16 = getv %tmp.15 :backgroundImage;
+            %tmp.17 = dup %tmp.10;
+            %tmp.18 = aputv %tmp.17 %tmp.12 %tmp.16;
+            %tmp.20 = const :locX;
+            %tmp.21 = -52;
+            %tmp.22 = dup %tmp.18;
+            %tmp.23 = aputv %tmp.22 %tmp.20 %tmp.21;
+            %tmp.25 = const :locY;
+            %tmp.26 = 0;
+            %tmp.27 = dup %tmp.23;
+            %tmp.28 = aputv %tmp.27 %tmp.25 %tmp.26;
+            %tmp.1 = newc %tmp.4 (%tmp.28);
+            lputv %rez_cmp_local_bitmap_backgroundImage.1 %tmp.1;
+[ "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen" 17 12 ]
+            [ "c_programming_projects_garmin__open_inside__WatchFace_bin_gen_006_B3224_00_source_Rez_mcgen_14_73_20_8_start" "c_programming_projects_garmin__open_inside__WatchFace_bin_gen_006_B3224_00_source_Rez_mcgen_14_73_20_8_stop" ]
+            %rez_cmp_local_text_TimeLabel.2 = local;
+            %tmp.31 = getm $.Toybox.WatchUi;
+            %tmp.32 = getv function ? %tmp.31 :Text;
+            %tmp.33 = newd 6;
+            %tmp.35 = const :identifier;
+            %tmp.36 = "TimeLabel";
+            %tmp.37 = dup %tmp.33;
+            %tmp.38 = aputv %tmp.37 %tmp.35 %tmp.36;
+            %tmp.40 = const :color;
+            %tmp.41 = getm $.Toybox.Graphics;
+            %tmp.42 = getv %tmp.41 :COLOR_WHITE;
+            %tmp.43 = dup %tmp.38;
+            %tmp.44 = aputv %tmp.43 %tmp.40 %tmp.42;
+            %tmp.46 = const :locX;
+            %tmp.47 = 109;
+            %tmp.48 = dup %tmp.44;
+            %tmp.49 = aputv %tmp.48 %tmp.46 %tmp.47;
+            %tmp.51 = const :locY;
+            %tmp.52 = 160;
+            %tmp.53 = dup %tmp.49;
+            %tmp.54 = aputv %tmp.53 %tmp.51 %tmp.52;
+            %tmp.56 = const :justification;
+            %tmp.57 = getm $.Toybox.Graphics;
+            %tmp.58 = getv %tmp.57 :TEXT_JUSTIFY_CENTER;
+            %tmp.59 = dup %tmp.54;
+            %tmp.60 = aputv %tmp.59 %tmp.56 %tmp.58;
+            %tmp.62 = const :font;
+            %tmp.63 = getm $.Toybox.Graphics;
+            %tmp.64 = getv %tmp.63 :FONT_LARGE;
+            %tmp.65 = dup %tmp.60;
+            %tmp.66 = aputv %tmp.65 %tmp.62 %tmp.64;
+            %tmp.29 = newc %tmp.32 (%tmp.66);
+            lputv %rez_cmp_local_text_TimeLabel.2 %tmp.29;
+[ "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen" 19 12 ]
+            %tmp.67 = newa 2 Array<WatchUi.Drawable>;
+            %tmp.69 = lgetv %rez_cmp_local_bitmap_backgroundImage.1;
+            %tmp.70 = dup %tmp.67;
+            %tmp.71 = aputv %tmp.70 0 %tmp.69;
+            %tmp.73 = lgetv %rez_cmp_local_text_TimeLabel.2;
+            %tmp.74 = dup %tmp.71;
+            %tmp.75 = aputv %tmp.74 1 %tmp.73;
+            ret %tmp.75;
+c_programming_projects_garmin__open_inside__WatchFace_bin_gen_006_B3224_00_source_Rez_mcgen_14_73_20_8_stop:
+        }
+    }
+    [ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 23; ]
+    module Strings {
+        [ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 23; ]
+        <init> {
+        }
+        [ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 24; @position = 27; initialized = true; ]
+        var AppName as ResourceId;
+    }
+}
+[ @file = "c:\programming projects\garmin (open inside)\WatchFace\bin\gen\006-B3224-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}
