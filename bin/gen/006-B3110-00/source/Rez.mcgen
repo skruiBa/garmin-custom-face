@@ -17,9 +17,9 @@ module Rez {
     module Layouts {
         function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
             var rez_cmp_local_bitmap_backgroundImage = new WatchUi.Bitmap({:identifier=>"backgroundImage", :rezId=>$.Rez.Drawables.backgroundImage, :locX=>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
-            rez_cmp_local_bitmap_backgroundImage.setLocation(((218 - rez_cmp_local_bitmap_backgroundImage.width) * 0.5), ((218 - rez_cmp_local_bitmap_backgroundImage.height) * 0.5));
+            rez_cmp_local_bitmap_backgroundImage.setLocation(((240 - rez_cmp_local_bitmap_backgroundImage.width) * 0.5), ((240 - rez_cmp_local_bitmap_backgroundImage.height) * 0.5));
 
-            var rez_cmp_local_text_TimeLabel = new WatchUi.Text({:identifier=>"TimeLabel", :color=>Graphics.COLOR_WHITE, :locX=>(218 * 0.5), :locY=>((218 - dc.getFontHeight(Gfx.FONT_LARGE)) * 0.5), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Gfx.FONT_LARGE});
+            var rez_cmp_local_text_TimeLabel = new WatchUi.Text({:identifier=>"TimeLabel", :color=>Graphics.COLOR_WHITE, :locX=>(240 * 0.5), :locY=>((240 - dc.getFontHeight(Gfx.FONT_LARGE)) * 0.5), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Gfx.FONT_LARGE});
 
             return [rez_cmp_local_bitmap_backgroundImage, rez_cmp_local_text_TimeLabel] as Array<WatchUi.Drawable>;
         }
