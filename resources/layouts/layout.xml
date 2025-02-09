@@ -1,12 +1,14 @@
 <layout id="WatchFace">
     <!-- Background -->
-    <bitmap id="backgroundImage" x="-52" y="0" filename="../drawables/background.png" />
+    <bitmap id="backgroundImage" x="center" y="center" filename="../drawables/Screenshot_4.png" />
+    
       <!-- Date eg. Wed, 23 -->
     <!-- <label id="TimeLabel" x="109" y="160" 
     font="Graphics.FONT_LARGE" 
     justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_RED" /> -->
     <!-- Time -->
-    <label id="TimeLabel" x="109" y="160" 
-    font="Graphics.FONT_LARGE" 
+    <label id="TimeLabel" x="center" y="center" 
+    font="Gfx.FONT_LARGE" 
     justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
+
 </layout>

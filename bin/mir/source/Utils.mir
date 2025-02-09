@@ -1,0 +1,45 @@
+[ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\Utils.mc"; @line = 1; ]
+using Toybox.WatchUi;
+[ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\Utils.mc"; @line = 2; ]
+using Toybox.System;
+[ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\Utils.mc"; @line = 3; ]
+using Toybox.Graphics;
+[ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\Utils.mc"; @line = 5; ]
+module Utils {
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\Utils.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\Utils.mc"; @line = 7; @position = 8; ]
+    var myFont = null;
+    [ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\Utils.mc"; @line = 9; ]
+    function getFont() {
+C_programming_projects_garmin__open_inside__WatchFace_source_Utils_mc_9_23_16_4_start:
+[ "C:\programming projects\garmin (open inside)\WatchFace\source\Utils.mc" 10 8 ]
+C_programming_projects_garmin__open_inside__WatchFace_source_Utils_mc_10_8_14_8_if_stmt:
+        %tmp.2 = getv ? :myFont;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_programming_projects_garmin__open_inside__WatchFace_source_Utils_mc_10_8_14_8_if_false;
+C_programming_projects_garmin__open_inside__WatchFace_source_Utils_mc_10_8_14_8_if_true:
+C_programming_projects_garmin__open_inside__WatchFace_source_Utils_mc_10_28_12_8_start:
+[ "C:\programming projects\garmin (open inside)\WatchFace\source\Utils.mc" 11 12 ]
+        %tmp.5 = getm $.Toybox.WatchUi;
+        %tmp.6 = getv function %tmp.5 :loadResource;
+        %tmp.8 = getv ? :Rez;
+        %tmp.9 = getv %tmp.8 :Fonts;
+        %tmp.10 = getv %tmp.9 :id_font_myFont;
+        %tmp.11 = invoke %tmp.5 %tmp.6(%tmp.10);
+        putv self :myFont %tmp.11;
+C_programming_projects_garmin__open_inside__WatchFace_source_Utils_mc_10_28_12_8_stop:
+        goto @C_programming_projects_garmin__open_inside__WatchFace_source_Utils_mc_10_8_14_8_if_end;
+C_programming_projects_garmin__open_inside__WatchFace_source_Utils_mc_10_8_14_8_if_false:
+C_programming_projects_garmin__open_inside__WatchFace_source_Utils_mc_10_8_14_8_if_end:
+[ "C:\programming projects\garmin (open inside)\WatchFace\source\Utils.mc" 15 8 ]
+        %tmp.13 = getv ? :myFont;
+        ret %tmp.13;
+C_programming_projects_garmin__open_inside__WatchFace_source_Utils_mc_9_23_16_4_stop:
+    }
+}
+[ @file = "C:\programming projects\garmin (open inside)\WatchFace\source\Utils.mc"; @line = 1; ]
+<init> {
+}
